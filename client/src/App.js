@@ -1,15 +1,9 @@
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register"
 import Home from "./pages/home/Home"
-import {
- BrowserRouter as Router,
- Routes,
-  Route
-} from "react-router-dom";
+import Event from "./pages/event/Event"
 function App() {
-  return (
-  <Login/>
-  )
+  return <Event/>;
 }
 
 export default App;

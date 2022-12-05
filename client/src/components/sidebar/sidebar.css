@@ -47,9 +47,13 @@
   .sidebarHr {
     margin: 20px 0;
   }
-  
-  .sidebarFriendList {
+  h3, h1 {
+    padding-bottom: 15px;
+  }
+  .sidebarEventList {
     padding: 0;
     margin: 0;
     list-style: none;
   }
+  
+  
