@@ -1,6 +1,8 @@
 import "./login.css";
-
+import { GoogleLogin } from "@react-oauth/google";
+import { useNavigate } from 'react-router-dom';
 export default function Login() {
+  const navigate = useNavigate();
   return (
     <div className="login">
       <div className="loginWrapper">
@@ -19,8 +21,10 @@ export default function Login() {
             <button className="loginRegisterButton">
               Create a New Account
             </button>
+            <GoogleLogin onSuccess={(response => {console.log(response); navigate("/")})} onError={()=>{console.log('errpr')}}/>
           </div>
         </div>
+       
       </div>
     </div>
   );
