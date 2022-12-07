@@ -1,5 +1,5 @@
 import "./login.css";
-
+import { GoogleLogin } from "@react-oauth/google";
 export default function Login() {
   return (
     <div className="login">
@@ -19,8 +19,10 @@ export default function Login() {
             <button className="loginRegisterButton">
               Create a New Account
             </button>
+            <GoogleLogin onSuccess={(response => console.log(response))} onError={()=>{console.log('errpr')}}/>
           </div>
         </div>
+       
       </div>
     </div>
   );
