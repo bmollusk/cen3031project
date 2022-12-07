@@ -10,9 +10,11 @@ import {
 } from "@material-ui/icons";
 import { EventsSide } from "../../dummyData";
 import EventSide from "../eventSide/EventSide";
+import Home from "../../pages/home/Home";
 
 export default function Sidebar() {
   return (
+    
     <div className="sidebar">
       <div className="sidebarWrapper">
       <h1>Events</h1>
