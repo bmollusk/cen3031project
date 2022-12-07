@@ -2,6 +2,7 @@ import "./topbar.css";
 import { Search, Person, Chat, Notifications } from "@material-ui/icons";
 import {Link} from "react-router-dom";
 export default function Topbar() {
+  let user = false;
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
@@ -36,7 +37,14 @@ export default function Topbar() {
             <span className="topbarIconBadge">1</span>
           </div>
         </div>
-        <Link to="/profile/12345"style={{textDecoration:"none"}}><img src="/assets/person/1.jpeg" alt="" className="topbarImg"/></Link>
+        <div>
+          {
+            user?
+            (<Link to="/profile/12345"style={{textDecoration:"none"}}><img src="/assets/person/1.jpeg" alt="" className="topbarImg"/></Link>):
+            (<Link to="/login"style={{textDecoration:"none"}}><img src="/assets/person/1.jpeg" alt="" className="topbarImg"/></Link>)
+          }
+        </div>
+        
         
       </div>
     </div>
